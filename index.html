@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gijs Bimmel</title>
+    <meta name="description" content="Independent Graphic Designer portfolio" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigatie header met hamburger menu voor mobiel -->
+      <header class="nav">
+        <a href="index.html" class="avatar" aria-label="Profile">
+          <img src="images/me.jpg" alt="Profiel foto" />
+        </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="links" aria-label="Hoofdmenu">
+          <a href="services.html">Services</a>
+          <a href="work.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Hero sectie met introductie en persoonlijke highlights -->
+      <main class="hero" data-reveal>
+        <!--<div class="badge">AVAILABLE FOR WORK</div>-->
+        <h1>
+          Independent<br />
+          UX/UI Designer
+        </h1>
+
+        <p class="u-text-style-regular">
+          Hey, I’m Gijs, a UI/UX Designer creating smooth, engaging, and visually striking digital experiences. I focus on turning ideas into intuitive interfaces that feel as good as they look.
+        </p>
+
+        <section class="showcase" aria-label="Persoonlijke highlights">
+          <article class="showcase-item">
+            <span class="showcase-kicker">About me</span>
+            <h3 class="showcase-title">UI/UX Designer from Maastricht</h3>
+            <p class="showcase-text">
+              I create intuitive, human-centered designs that blend creativity with functionality to deliver seamless digital experiences.
+            </p>
+          </article>
+
+          <article class="showcase-item">
+            <span class="showcase-kicker">Experience</span>
+            <h3 class="showcase-stat">3+ years</h3>
+            <p class="showcase-text">User research, Wireframing, prototyping and usability testing.</p>
+          </article>
+
+          <article class="showcase-item">
+            <span class="showcase-kicker">Experience</span>
+            <h3 class="showcase-title">Design Thinking</h3>
+            <p class="showcase-text">Apply an iterative, problem-solving approach to create user-centered solutions.</p>
+          </article>
+
+          <article class="showcase-item">
+            <span class="showcase-kicker">Get in Touch</span>
+            <h3 class="showcase-title">Always open to new opportunities</h3>
+            <p class="showcase-text">
+              I’m always open to new projects, collaborations, or a quick chat about design.
+            </p>
+          </article>
+        </section>
+      </main>
+      
+      <!-- Portfolio projecten sectie -->
+      <section id="work" class="work" aria-labelledby="work-title" data-reveal style="--reveal-delay:120ms">
+        <div class="work-head">
+          <div>
+            <h2 id="work-title">Work</h2>
+            <p class="work-intro">A selection of projects I've worked on recently. Each one tells a story of solving real problems with thoughtful design.</p>
+          </div>
+          <a class="link-underline" href="work.html">See all projects</a>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <a class="project-media" href="project1.html">
+              <img src="images/PlaydoraLogo.png" alt="Zesty mobile app interface" />
+            </a>
+            <div class="project-content">
+              <h3>Playdora</h3>
+              <p>Online toy store with AR</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <a class="project-media" href="project2.html">
+              <img src="images/CTOUCH_AI_CUSTOMIZE_Home.png" alt="Poesial beauty ecommerce interface" />
+            </a>
+            <div class="project-content">
+              <h3>CTOUCH</h3>
+              <p>Interactive display platform</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Services overzicht met drie hoofddiensten -->
+      <section id="services" class="services" aria-labelledby="services-title" data-reveal style="--reveal-delay:200ms">
+        <div class="services-head">
+          <div>
+            <h2 id="services-title">Services</h2>
+            <p class="u-text-style-regular1">I provide three focused design services to keep things simple and effective. No headaches, just great design.</p>
+          </div>
+          <a class="link-underline" href="services.html">See my services</a>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <header class="service-card-head">
+              <span class="service-index">1.</span>
+              <h3>Website</h3>
+              <span class="dot dot-orange" aria-hidden="true"></span>
+            </header>
+            <p class="service-desc">I design user-friendly and visually appealing websites that are both beautiful and functional, focusing on clear structure and a smooth user experience.</p>
+          </article>
+
+          <article class="service-card">
+            <header class="service-card-head">
+              <span class="service-index">2.</span>
+              <h3>Product</h3>
+              <span class="dot dot-teal" aria-hidden="true"></span>
+            </header>
+            <p class="service-desc">A space to experiment with product features, user flows, and concepts that evolve into practical solutions.</p>
+          </article>
+
+          <article class="service-card">
+            <header class="service-card-head">
+              <span class="service-index">3.</span>
+              <h3>Mobile</h3>
+              <span class="dot dot-mint" aria-hidden="true"></span>
+            </header>
+            <p class="service-desc">Smooth and intuitive mobile experiences crafted to match how people interact with apps daily, creating designs users genuinely enjoy.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Call-to-action sectie met samenwerkingsmogelijkheden -->
+      <section class="together" aria-label="Together we can" data-reveal style="--reveal-delay:280ms">
+        <div class="together-top">
+          <h2 class="together-headline">Together,<br />we can...</h2>
+          <div class="together-bullets">
+            <div class="bullet-column">
+              <div class="bullet-item">
+                <span class="bullet-dot"></span>
+                <p>Build a lasting partnership for ongoing design needs.</p>
+              </div>
+              <div class="bullet-item">
+                <span class="bullet-dot"></span>
+                <p>Give your product a fresh and modern UI.</p>
+              </div>
+            </div>
+            <div class="bullet-column">
+              <div class="bullet-item">
+                <span class="bullet-dot"></span>
+                <p>Bring your vision to life with thoughtful design.</p>
+              </div>
+              <div class="bullet-item">
+                <span class="bullet-dot"></span>
+                <p>Shape interfaces that look clean and feel natural.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <!-- Footer met contactgegevens en navigatielinks -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-cta">
+            <p class="cta-text">Let's work together</p>
+            <a href="mailto:gijsbimmel@gmail.com" class="link-underline">gijsbimmel@gmail.com</a>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Socials</h4>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/gijs-bimmel/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/gijs.bml/" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Scroll-reveal animatie: toont elementen wanneer ze in beeld komen
+      (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+      })();
+
+      // Animaties voor hero heading: split tekst in individuele karakters voor typewriter effect
+      (function() {
+        var heading = document.querySelector('.hero h1');
+        if (!heading) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        // Split tekst maar behoud <br> als regelonderbrekingen
+        var html = heading.innerHTML;
+        var parts = html.split('<br>');
+        var index = 0;
+        var rebuilt = parts.map(function(part, lineIdx) {
+          var text = part.replace(/\n/g, '').trim();
+          var chars = Array.from(text);
+          var spanned = chars.map(function(ch) {
+            var span = '<span class="char" style="--i:' + (index++) + '">' +
+              (ch === ' ' ? '&nbsp;' : ch) + '</span>';
+            return span;
+          }).join('');
+          return spanned;
+        }).join('<br>');
+        heading.innerHTML = rebuilt;
+      })();
+
+      // Hamburger menu toggle functionaliteit
+      (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var nav = document.querySelector('.nav');
+        var links = document.querySelector('.links');
+        
+        if (!hamburger || !nav || !links) return;
+
+        // Toggle menu bij klik op hamburger
+        hamburger.addEventListener('click', function() {
+          var isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isExpanded);
+          nav.classList.toggle('menu-open');
+          document.body.style.overflow = !isExpanded ? 'hidden' : '';
+        });
+
+        // Sluit menu wanneer er op een link wordt geklikt
+        links.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Sluit menu bij klik buiten het menu
+        document.addEventListener('click', function(e) {
+          if (!nav.contains(e.target) && nav.classList.contains('menu-open')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
