@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gijs Bimmel</title>
+    <meta name="description" content="Independent Graphic Designer portfolio" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="nav">
+        <a href="index.html" class="avatar" aria-label="Profile">
+          <img src="images/me.jpg" alt="Profiel foto" />
+        </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="links" aria-label="Hoofdmenu">
+          <a href="services.html">Services</a>
+          <a href="work.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Contact pagina hoofdcontent -->
+      <main class="contact-page">
+        <h1 class="contact-title" data-reveal>Let's talk!</h1>
+        
+        <p class="contact-intro" data-reveal style="--reveal-delay:120ms">
+          Tell me about your project and goals by filling the form or send an email to 
+          <a href="mailto:gijsbimmel@gmail.com" class="contact-email">gijsbimmel@gmail.com</a>
+        </p>
+
+        <p class="social-intro" data-reveal style="--reveal-delay:200ms">You can also find me at</p>
+
+        <div class="social-links-grid" data-reveal style="--reveal-delay:280ms">
+          <div class="social-link-item">
+            <a href="https://www.linkedin.com/in/gijs-bimmel/" target="_blank" class="social-link">LinkedIn</a>
+          </div>
+          <div class="social-link-item">
+            <a href="https://www.instagram.com/gijs.bml/" target="_blank" class="social-link">Instagram</a>
+          </div>
+          <div class="social-link-item">
+            <a href="images/cv.pdf" target="_blank" class="social-link">Read.cv</a>
+          </div>
+        </div>
+      </main>
+      <!-- Footer met contactgegevens en navigatielinks -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-cta">
+            <p class="cta-text">Let's work together</p>
+            <a href="mailto:gijsbimmel@gmail.com" class="link-underline">gijsbimmel@gmail.com</a>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Socials</h4>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/gijs-bimmel/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/gijs.bml/" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Scroll-reveal animatie: toont elementen wanneer ze in beeld komen
+      (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+      })();
+
+      // Hamburger menu toggle functionaliteit
+      (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var nav = document.querySelector('.nav');
+        var links = document.querySelector('.links');
+        
+        if (!hamburger || !nav || !links) return;
+
+        hamburger.addEventListener('click', function() {
+          var isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isExpanded);
+          nav.classList.toggle('menu-open');
+          document.body.style.overflow = !isExpanded ? 'hidden' : '';
+        });
+
+        // Sluit menu wanneer er op een link wordt geklikt
+        links.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Sluit menu bij klik buiten het menu
+        document.addEventListener('click', function(e) {
+          if (!nav.contains(e.target) && nav.classList.contains('menu-open')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
