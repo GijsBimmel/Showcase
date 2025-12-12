@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gijs Bimmel</title>
+    <meta name="description" content="Independent Graphic Designer portfolio" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="nav">
+        <a href="index.html" class="avatar" aria-label="Profile">
+          <img src="images/me.jpg" alt="Profiel foto" />
+        </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="links" aria-label="Hoofdmenu">
+          <a href="services.html">Services</a>
+          <a href="work.html" aria-current="page">Work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Hero sectie met project titel en introductie -->
+      <section class="about-hero" data-reveal>
+        <h1 class="about-title">Fitness App</h1>
+        <h3>Motivation Made Simple.</h3>
+        <p class="project-intro">The new year often starts with energy and good intentions, but motivation fades quickly. This app helps you stay focused with simple reminders and supportive features that keep your goals clear. It turns resolutions into lasting habits, not just January promises.</p>
+      </section>
+
+      <!-- Project metadata - client, services, type, datum -->
+      <section class="project-metadata" data-reveal style="--reveal-delay:120ms">
+        <div class="metadata-grid">
+          <div class="metadata-item">
+            <div class="metadata-label">Client</div>
+            <div class="metadata-value">School project</div>
+          </div>
+          <div class="metadata-item">
+            <div class="metadata-label">Services</div>
+            <div class="metadata-value">UI & UX Design<br>User Research</div>
+          </div>
+          <div class="metadata-item">
+            <div class="metadata-label">Type</div>
+            <div class="metadata-value">App</div>
+          </div>
+          <div class="metadata-item">
+            <div class="metadata-label">Date</div>
+            <div class="metadata-value">February 2025</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project afbeeldingen sectie met beschrijvingen -->
+      <section class="project-image-section" data-reveal style="--reveal-delay:180ms">
+        <div class="project-image-container">
+          <img src="images/Frame2.png" alt="Suitcase App interface" class="project-image" />
+          <div class="project-image-caption">
+            <p class="project-image-description">The concept started with a simple goal our group set for 2025: going to the gym more often. Staying motivated isn’t always easy, so we came up with an app that helps us stay on track while making the whole experience more enjoyable. It’s not meant to feel like a strict coach, but more like a playful motivator that gives you just the right nudge to keep going.</p>
+            <p class="project-image-description">A big part of this is the badge and reward system. You earn badges as you make progress, creating a light sense of friendly competition within the group. It’s not about being the best — it’s about celebrating progress together and giving each other that extra bit of encouragement. Making it fun also makes it easier to stick with.</p>
+          </div>
+          <img src="images/Frame 23.png" alt="Suitcase App interface" class="project-image" />
+          <div class="project-image-caption">
+            <p class="project-image-description">You also get a personal dashboard that gives you a clear overview of how you’re doing. No overwhelming data or complicated charts — just a clean, simple place to see what you’ve achieved and what you’re working toward. It feels like a calm starting point you can check in with every day.</p>
+          </div>
+          <img src="images/Frame3.png" alt="Suitcase App interface" class="project-image" />
+          <div class="project-image-caption">
+            <p class="project-image-description">Community plays an important role as well. You can talk with others, ask questions, share experiences, or drop a bit of motivation when someone needs it. Combined with personalized notifications and widgets you can set yourself, your goals stay visible and within reach. Together, these elements turn working out into something you don’t just have to do, but something you want to do — and something you can keep growing in, step by step.</p>
+          </div>
+          <img src="images/Frame4.png" alt="Suitcase App interface" class="project-image" />
+          <div class="project-image-caption">
+            <p class="project-image-description">By combining playful rewards, clear progress tracking, social support, and personalized reminders, the app transforms going to the gym from a chore into a motivating and enjoyable habit. It doesn’t just help us stick to our 2025 goal — it makes the whole journey more engaging, social, and fun, so staying active becomes something we actually look forward to.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer met contactgegevens en navigatielinks -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-cta">
+            <p class="cta-text">Let's work together</p>
+            <a href="mailto:gijsbimmel@gmail.com" class="link-underline">gijsbimmel@gmail.com</a>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Socials</h4>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/gijs-bimmel/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/gijs.bml/" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Scroll-reveal animatie: toont elementen wanneer ze in beeld komen
+      (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+      })();
+
+      // Animaties voor statistieken: tel cijfers op (niet gebruikt op project pagina's)
+      (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        
+        var statsSection = document.querySelector('.about-stats-section');
+        if (!statsSection) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var statNumbers = entry.target.querySelectorAll('.stat-number');
+              statNumbers.forEach(function(statNumber) {
+                var text = statNumber.textContent;
+                var number = parseInt(text.replace(/\D/g, ''));
+                
+                if (isNaN(number)) return;
+
+                var suffix = text.replace(/[\d.,\s]/g, '');
+                var duration = 2000;
+                var startTime = null;
+
+                function animate(currentTime) {
+                  if (!startTime) startTime = currentTime;
+                  var elapsed = currentTime - startTime;
+                  var progress = Math.min(elapsed / duration, 1);
+                  
+                  var easeProgress = progress * (2 - progress);
+                  var current = Math.floor(easeProgress * number);
+                  
+                  statNumber.textContent = current + suffix;
+                  
+                  if (progress < 1) {
+                    requestAnimationFrame(animate);
+                  } else {
+                    statNumber.textContent = text;
+                  }
+                }
+
+                requestAnimationFrame(animate);
+              });
+              
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
+      })();
+
+      // Automatische carrousel voor about-placeholder-img
+      (function() {
+        var carousel = document.querySelector('.about-placeholder-img.carousel-container');
+        if (!carousel) return;
+
+        var slides = carousel.querySelectorAll('.carousel-slide');
+        if (slides.length === 0) return;
+
+        var currentSlide = 0;
+        var autoSlideInterval;
+
+        function showSlide(index) {
+          // Wrap around indien nodig (rondlopen bij einde)
+          if (index >= slides.length) {
+            currentSlide = 0;
+          } else if (index < 0) {
+            currentSlide = slides.length - 1;
+          } else {
+            currentSlide = index;
+          }
+
+          // Update slides - toon alleen actieve slide
+          slides.forEach(function(slide, i) {
+            slide.classList.toggle('active', i === currentSlide);
+          });
+        }
+
+        function nextSlide() {
+          showSlide(currentSlide + 1);
+        }
+
+        function startAutoSlide() {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          // Automatische rotatie elke 3 seconden
+          autoSlideInterval = setInterval(nextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+          if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+          }
+        }
+
+        // Pauzeer bij hover voor betere gebruikerservaring
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+
+        // Start automatische slideshow
+        startAutoSlide();
+      })();
+
+      // Hamburger menu toggle functionaliteit
+      (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var nav = document.querySelector('.nav');
+        var links = document.querySelector('.links');
+        
+        if (!hamburger || !nav || !links) return;
+
+        hamburger.addEventListener('click', function() {
+          var isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isExpanded);
+          nav.classList.toggle('menu-open');
+          document.body.style.overflow = !isExpanded ? 'hidden' : '';
+        });
+
+        // Sluit menu wanneer er op een link wordt geklikt
+        links.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Sluit menu bij klik buiten het menu
+        document.addEventListener('click', function(e) {
+          if (!nav.contains(e.target) && nav.classList.contains('menu-open')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
