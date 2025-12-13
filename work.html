@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gijs Bimmel</title>
+    <meta name="description" content="Independent Graphic Designer portfolio" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigatie header met hamburger menu voor mobiel -->
+      <header class="nav">
+        <a href="index.html" class="avatar" aria-label="Profile">
+          <img src="images/me.jpg" alt="Profiel foto" />
+        </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="links" aria-label="Hoofdmenu">
+          <a href="services.html">Services</a>
+          <a href="work.html" aria-current="page">Work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Work sectie met projecten filter -->
+      <section id="work" class="work" aria-labelledby="work-title" data-reveal style="--reveal-delay:120ms">
+        <div class="work-head">
+          <div>
+            <h2 id="work-title">Work</h2>
+          </div>
+        </div>
+
+        <nav class="work-filters" aria-label="Filter projects">
+          <a href="#" class="filter-item active" data-filter="all">All <span class="filter-count">0</span></a>
+          <a href="#" class="filter-item" data-filter="website">Website <span class="filter-count">0</span></a>
+          <a href="#" class="filter-item" data-filter="product">Product <span class="filter-count">0</span></a>
+          <a href="#" class="filter-item" data-filter="mobile">Mobile           <span class="filter-count">0</span></a>
+        </nav>
+
+        <!-- Projecten grid met filterbare project cards -->
+        <div class="projects">
+          <div class="project-card" data-categories="website">
+            <a class="project-media" href="project1.html">
+              <img src="images/PlaydoraLogo.png" alt="Zesty mobile app interface" />
+            </a>
+            <div class="project-content">
+              <h3>Playdora</h3>
+              <p>Online toy store with AR</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-categories="product">
+            <a class="project-media" href="project2.html">
+              <img src="images/CTOUCH_AI_CUSTOMIZE_Home.png" alt="Poesial beauty ecommerce interface" />
+            </a>
+            <div class="project-content">
+              <h3>CTOUCH</h3>
+              <p>Interactive display platform</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-categories="website">
+            <a class="project-media" href="project3.html">
+              <img src="images/Frame 38.png" alt="Nova collaborative workflow platform" />
+            </a>
+            <div class="project-content">
+              <h3>Redesign Bring Online </h3>
+              <p>Website research & design/p>
+            </div>
+          </div>
+
+          <div class="project-card" data-categories="mobile">
+            <a class="project-media" href="project4.html">
+              <img src="images/Frame 61.png" alt="Nova collaborative workflow platform" />
+            </a>
+            <div class="project-content">
+              <h3>Fitness App</h3>
+              <p>Mobile fitness tracker</p>
+            </div>
+          </div>
+
+        
+        </div>
+      </section>
+       
+      <!-- Footer met contactgegevens en navigatielinks -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-cta">
+            <p class="cta-text">Let's work together</p>
+            <a href="mailto:gijsbimmel@gmail.com" class="link-underline">gijsbimmel@gmail.com</a>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Socials</h4>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/gijs-bimmel/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/gijs.bml/" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Project filter functionaliteit - filtert projecten op categorie
+      (function() {
+        var filterItems = Array.from(document.querySelectorAll('.work-filters .filter-item'));
+        var projectCards = Array.from(document.querySelectorAll('.projects .project-card'));
+        if (!filterItems.length || !projectCards.length) return;
+
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Tel projecten per categorie voor filter counts
+        var counts = projectCards.reduce(function(acc, card) {
+          var categories = (card.dataset.categories || '')
+            .split(',')
+            .map(function(cat) { return cat.trim(); })
+            .filter(Boolean);
+
+          acc.all = (acc.all || 0) + 1;
+          categories.forEach(function(category) {
+            acc[category] = (acc[category] || 0) + 1;
+          });
+
+          return acc;
+        }, {});
+
+        filterItems.forEach(function(item) {
+          var filterKey = item.dataset.filter;
+          var countEl = item.querySelector('.filter-count');
+          if (countEl && counts[filterKey] != null) {
+            countEl.textContent = counts[filterKey];
+          }
+
+          item.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (item.classList.contains('active')) return;
+
+            filterItems.forEach(function(link) {
+              link.classList.toggle('active', link === item);
+            });
+
+            applyFilter(filterKey);
+          });
+        });
+
+        function applyFilter(filterKey) {
+          var visibleIndex = 0;
+
+          projectCards.forEach(function(card) {
+            var categories = (card.dataset.categories || '')
+              .split(',')
+              .map(function(cat) { return cat.trim(); })
+              .filter(Boolean);
+
+            var matches = filterKey === 'all' || categories.indexOf(filterKey) !== -1;
+
+            card.classList.remove('is-filter-visible');
+            card.style.animationDelay = '';
+
+            if (matches) {
+              card.style.display = '';
+
+              if (!prefersReducedMotion) {
+                // Herstart animatie voor zichtbare cards
+                card.offsetWidth;
+                card.style.animationDelay = (visibleIndex * 60) + 'ms';
+                card.classList.add('is-filter-visible');
+              }
+
+              visibleIndex += 1;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+
+        applyFilter('all');
+      })();
+    </script>
+
+    <script>
+      // Scroll-reveal animatie: toont elementen wanneer ze in beeld komen
+      (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('[data-reveal]').forEach(function(el) { observer.observe(el); });
+      })();
+
+      // Hamburger menu toggle functionaliteit
+      (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var nav = document.querySelector('.nav');
+        var links = document.querySelector('.links');
+        
+        if (!hamburger || !nav || !links) return;
+
+        hamburger.addEventListener('click', function() {
+          var isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isExpanded);
+          nav.classList.toggle('menu-open');
+          document.body.style.overflow = !isExpanded ? 'hidden' : '';
+        });
+
+        // Sluit menu wanneer er op een link wordt geklikt
+        links.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Sluit menu bij klik buiten het menu
+        document.addEventListener('click', function(e) {
+          if (!nav.contains(e.target) && nav.classList.contains('menu-open')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+            document.body.style.overflow = '';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+
